@@ -1,0 +1,53 @@
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sams', sans-serif;
+
+
+// grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] 1fr [full-end];
+
+.sidebar {
+    background-color: $color-primary;
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    position: fixed;
+    border: none;
+    border-radius: 0;
+
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    margin-top: 4rem;
+
+    &::before,
+    &::after {
+        background-color: #fff;
+        height: 2px;
+        width: 4.5rem;
+        content: "";
+        display: block;
+    }
+
+    &::before {
+        transform: translateY(-1.5rem);
+    }
+    
+    &::after {
+        transform: translateY(1.5rem);
+    }
+}

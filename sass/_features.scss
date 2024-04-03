@@ -1,0 +1,51 @@
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sams', sans-serif;
+
+// grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] 1fr [full-end];
+
+.features {
+    // background-color: $color-grey-light-2;
+    grid-column: center-start / center-end;
+    margin: 15rem 0;;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    // grid-template-rows: auto auto;
+    grid-gap: 6rem;
+    align-items: start;
+}
+
+.feature {
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+      font-size: 1.7rem;  
+    }
+
+
+    
+}
